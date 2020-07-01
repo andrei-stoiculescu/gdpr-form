@@ -1,136 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<script src="jquery.signaturepad.js"></script>
-
-<style type="text/css">
-	.sigPad label.error {
-  color: #f33;
-}
-.sigPad input.error {
-  border-color: #f33;
-}
-p.error {
-  display: block;
- /* margin: 0.5em 0; */
- /* padding: 0.4em; */
-
-  background-color: #f33;
-
-  color: #fff;
-  font-weight: bold;
-}
-.label-padding{
-	padding:20px 0 0 0;
-}
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!-- Container section start -->
+<div class="container">
+  <!-- Logo section start -->
+	<center>
+		<img src="https://gosw.org/wp-content/uploads/2020/03/logo-Placeholder.png" class="img-fluid" style="max-width: 180px;">
+	</center>
+  <!-- Logo section end -->
+
+<!-- Title section start -->
+<h4 class="text-center">GDPR Consent Form</h4>
+<br>
+<!-- Title section end -->
+
+<!-- Form section start -->
+<form method="post" action="pdf.php" class="form sigPad">
+  <p>Please identify yourself and fill in the following fields:</p>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-6 py-2">
+          <label for="name">Full name*</label>
+            <input type="text" name="name" id="name" class="name form-control" placeholder="First and last name" >
+        </div>
+        <div class="col-md-6 py-2">
+          <label for="uid">Unique ID number</label>
+            <input type="text" name="uid" id="uid" class="uid form-control" placeholder="Your personal ID number">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 py-2">
+          <label for="tel">Phone number</label>
+            <input type="tel" name="tel" id="tel" class="tel form-control" placeholder="Your phone number">
+        </div>
+        <div class="col-md-6 py-2">
+          <label for="email">E-mail</label>
+            <input type="text" name="email" id="email" class="email form-control" placeholder="Your email address">
+        </div>
+    </div> 
+  
+  <div class="spacer">&nbsp;</div>
+  
+  <h5>Please read carefully</h5>
+   
+  <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec turpis elit. Phasellus eget leo finibus, egestas odio et, bibendum diam. In at sodales massa, in suscipit elit. Suspendisse sagittis dignissim nisi, ut vehicula diam porttitor venenatis. Sed a tincidunt urna. Praesent mauris massa, dapibus et tempor eu, lacinia non odio. Curabitur et nulla nec neque facilisis pharetra eget nec risus. Phasellus lobortis ex eros. Aliquam convallis, risus in malesuada faucibus, ante orci accumsan augue, et luctus dolor risus a mi. Aliquam erat volutpat. Nam pretium finibus consectetur. Morbi ornare arcu id hendrerit rhoncus.</p>
+  
+  <div class="spacer">&nbsp;</div>
+
+  <p class="text-body"><strong>As per the below options, I express my free and informed consent to the processing of my personal data for the following:</strong></p>
+
+  <div class="spacer">&nbsp;</div>
+
+  <p class="text-justify">Direct marketing:</p>
+    <input class="radio-input" required type="radio" name="group1" id="group1" value="Yes" data-error-msg="Must enter your name?"> Yes&nbsp;&nbsp;&nbsp;
+    <input class="radio-input"  type="radio" name="group1" id="group1" value="No"> No
+  <br>&nbsp;
+    <p class="text-justify">Promotion of other services:</p>
+    <input class="radio-input" required type="radio" name="group2" id="group2" value="Yes"> Yes&nbsp;&nbsp;&nbsp;
+    <input class="radio-input" type="radio" name="group2" id="group2" value="No"> No
+  <br>&nbsp;
+    <p class="text-justify">Receiving newsletters:</p>
+    <input class="radio-input" required type="radio" name="group3" id="group3" value="Yes"> Yes&nbsp;&nbsp;&nbsp;
+    <input class="radio-input" type="radio" name="group3" id="group3" value="No"> No
+  <br>&nbsp;
+    <p class="text-justify">Consent for third party marketing:</p>
+    <input class="radio-input" required type="radio" name="group4" id="group4" value="Yes"> Yes&nbsp;&nbsp;&nbsp;
+    <input class="radio-input" type="radio" name="group4" id="group4" value="No"> No
+  <br>&nbsp;
+
+  <!-- Signature pad section start -->
+  <div class="well">
+    <center>
+    	<div class="row">
+        	<div class="col-sm-12">
+         		<div style="display:inline-block"><p><strong>Signature</strong></p></div>
+         		<div style="display:inline-block; margin-left: 175px;"><p class="clearButton"><a href="#clear">Erase</a></p></div>
+        </div>
+    	</div>
+
+      <div class="sig sigWrapper">
+        <canvas class="pad" width="" height="80"></canvas>
+        <input type="hidden" name="imgOutput" class="imgOutput">
+      </div>
+    </center>
+  </div>
+  <!-- Signature pad section end -->
+
+  <div class="spacer">&nbsp;</div>
+
+  <center>
+    <button class="btn-lg btn-success" type="submit" >I agree</button>
+  </center>
+</form>
+
+</div>
+<!-- Container section end -->
+
+
+<div class="spacer">&nbsp;</div>
+<div class="spacer">&nbsp;</div>
 
 <div class="container">
-	<center>
-		<img src="https://i.imgur.com/WKqCeIj.png" class="img-fluid" style="max-width: 180px;">
-	</center>
-
-<h4 class="text-center">INFORMARE / DECLARATIE CONSIMTAMANT PENTRU REZERVAREA / CUMPARAREA SERVICIILOR SI / SAU PACHETELOR DE SERVICII DE CALATORIE IN CONTEXTUL PRELUCRARII DATELOR CU CARACTER PERSONAL
-</h4>
-
-<br>
-
-
-<form method="post" action="pdf.php" class="form sigPad" id="">
-  <p>Va rugam sa va identificati si sa completati urmatoarele date, dupa caz:</p>
-
- <div class="form-group row container-fluid">
-  <div class="col-6">
-    <label for="name">Nume si prenume*</label>
-      <input type="text" name="name" id="name" class="name form-control" placeholder="Nume si prenume sau numele firmei" >
-  </div>
-  <div class="col-6">
-    <label for="cnp" class="label-padding">CNP/CUI</label>
-    <input type="text" name="cnp" id="cnp" class="cnp form-control" placeholder="CNP sau CUI">
-  </div>
-  <div class="col-6">
-    <label for="tel" class="label-padding">Telefon</label>
-    <input type="tel" name="tel" id="tel" class="tel form-control" placeholder="Numarul dvs. de telefon">
-  </div>
-    <div class="col-6">
-    <label for="email" class="label-padding">E-mail</label>
-    <input type="text" name="email" id="email" class="email form-control" placeholder="Adresa dvs. de e-mail">
-  </div>
-</div> 
-
-
-<h3>Aspecte importante</h3>
-   <p class="text-justify">S.C. LUXETRAVELDEAL S.R.L. este o persoana juridica romana, care are ca obiect principal de activitate - organizarea pachetelor de servicii de calatorie, excursiilor, evenimentelor etc. care sunt ofertate si comercializate prin intermediul agentiilor de turism sau direct de catre tur-operatori, respectiv rezervarea, intermedierea si vanzarea serviciilor de calatorie, excursii, transport si cazare, cu ridicata sau cu amanuntul, catre publicul larg si/sau clientilor comerciali.</p>
-   <p class="text-justify">S.C. LUXETRAVELDEAL S.R.L. are sediul social  in Calea Plevnei, nr.10, ap.1, Bucuresti, Sector 5, cod postal 050052, telefon 021 230 13 60, fax 021 236 98 97, este inregistrata la Oficiul Registrului Comertului din Bucuresti, sub nr. J40/3298/21.03.2011, avand cod fiscal RO28213416 si cont IBAN: RO15BTRLRONCRT0353958401 deschis la BANCA TRANSILVANIA, reprezentata legal de dna. Laura Langhe  in calitate de Administrator.</p>
-
-
-<br>
-<p class="text-justify"><strong>Totodata, imi exprim, pe baza optiunii de mai jos, consimtimantul in mod expres, neechivoc, liber si informat cu privire la prelucrarea datelor mele cu caracter personal, in scop de:</strong></p>
-<p class="text-justify">Reclama, marketing (marketing direct), publicitate:</p>
-  <input class="radio-input" required type="radio" name="group1" id="group1" value="Da" data-error-msg="Must enter your name?"> Da&nbsp;&nbsp;&nbsp;
-  <input class="radio-input"  type="radio" name="group1" id="group1" value="Nu"> Nu
-<br>&nbsp;
-  <p class="text-justify">Promovare/evaluare servicii, promovare evenimente si manifestari culturale/sportive sau de alta natura, desfasurare campanii promotionale, concursuri, loterii publicitare, fidelizare:</p>
-  <input class="radio-input" required type="radio" name="group2" id="group2" value="Da"> Da&nbsp;&nbsp;&nbsp;
-  <input class="radio-input" type="radio" name="group2" id="group2" value="Nu"> Nu
-<br>&nbsp;
-  <p class="text-justify">Transmitere newsletter:</p>
-  <input class="radio-input" required type="radio" name="group3" id="group3" value="Da"> Da&nbsp;&nbsp;&nbsp;
-  <input class="radio-input" type="radio" name="group3" id="group3" value="Nu"> Nu
-<br>&nbsp;
-  <p class="text-justify">Efectuarea de comunicari comerciale pentru serviciile  S.C. LUXETRAVELDEAL S.R.L., inclusiv cele dezvoltate impreuna cu un partener S.C. LUXETRAVELDEAL S.R.L., prin orice mijloc de comunicare, inclusiv prin intermediul serviciilor de comunicatii electronice:</p>
-  <input class="radio-input" required type="radio" name="group4" id="group4" value="Da"> Da&nbsp;&nbsp;&nbsp;
-  <input class="radio-input" type="radio" name="group4" id="group4" value="Nu"> Nu
- <br>&nbsp;
-
-<div class="well">
-<center>
-	<div class="row">
-    	<div class="col-sm-12">
-     		<div style="display:inline-block"><p><strong>Semnatura</strong></p></div>
-     		<div style="display:inline-block; margin-left: 175px;"><p class="clearButton"><a href="#clear">Sterge</a></p></div>
-    </div>
-	</div>
-
-  <div class="sig sigWrapper" >
-    <canvas class="pad" width="" height="80"></canvas>
-    <input type="hidden" name="imgOutput" class="imgOutput">
-  </div>
-  </div>
-</center>
-
-<div class="spacer">&nbsp;</div>
-  <center><button class="btn-lg btn-success" type="submit" >Sunt de acord</button></center>
-</form>
+<!-- Footer section start -->
+<footer class="footer bg-light">
+   <p class="py-2">Developed by h4ck3r_m4n</p>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="jquery.signaturepad.js"></script>
+  <script>
+      var sig;
+    $(document).ready(function() {
+      /*sig = $('.sigPad').signaturePad();*/
+      sig = $('.sigPad').signaturePad({drawOnly:true});
+    });
+    $('.sigPad').submit(function(evt) {
+      $('.imgOutput').val( sig.getSignatureImage() );
+    });  
+  </script>
+</footer>
+<!-- Footer section end -->
 </div>
 
-<div class="spacer">&nbsp;</div>
-<div class="spacer">&nbsp;</div>
-
-
-<script>
-    var sig;
-  $(document).ready(function() {
-    /*sig = $('.sigPad').signaturePad();*/
-    sig = $('.sigPad').signaturePad({drawOnly:true});
-  });
-  $('.sigPad').submit(function(evt) {
-    $('.imgOutput').val( sig.getSignatureImage() );
-  });  
-</script>
-
-<script type="text/javascript">
-	var input = document.getElementById('name');
-	input.oninvalid = function(event) {
-    event.target.setCustomValidity('Va rugam sa completati numele si prenumele sau numele firmei');
-}
-</script>
 </body>
 </html>

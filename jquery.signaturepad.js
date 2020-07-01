@@ -1,13 +1,4 @@
-/**
- * Usage for accepting signatures:
- *  $('.sigPad').signaturePad()
- *
- * Usage for displaying previous signatures:
- *  $('.sigPad').signaturePad({displayOnly:true}).regenerate(sig)
- *  or
- *  var api = $('.sigPad').signaturePad({displayOnly:true})
- *  api.regenerate(sig)
- */
+
 (function ($) {
 
 function SignaturePad (selector, options) {
@@ -484,7 +475,7 @@ function SignaturePad (selector, options) {
    * Sets up mouse events, hides and shows descriptions and sets current classes
    *
    * @private
-   */
+ 
   function typeIt () {
     clearCanvas()
     disableCanvas()
@@ -506,6 +497,7 @@ function SignaturePad (selector, options) {
 
     typeItCurrentFontSize = typeItDefaultFontSize = $(settings.typed, context).css('font-size').replace(/px/, '')
   }
+  */
 
   /**
    * Callback registered on key up and blur events for input field
@@ -514,7 +506,7 @@ function SignaturePad (selector, options) {
    * @private
    *
    * @param {String} val The value of the input field
-   */
+
   function type (val) {
     var typed = $(settings.typed, context)
       , cleanedVal = $.trim(val.replace(/>/g, '&gt;').replace(/</g, '&lt;'))
@@ -543,6 +535,7 @@ function SignaturePad (selector, options) {
       }
     }
   }
+  */
 
   /**
    * Default onBeforeValidate function to clear errors
@@ -870,9 +863,9 @@ $.fn.signaturePad.defaults = {
   , penWidth : 2 // Thickness of the pen
   , penCap : 'round' // Determines how the end points of each line are drawn (values: 'butt', 'round', 'square')
   , lineColour : '#ccc' // Colour of the signature line
-  , lineWidth : 2 // Thickness of the signature line
+  , lineWidth : 1 // Thickness of the signature line
   , lineMargin : 5 // Margin on right and left of signature line
-  , lineTop : 35 // Distance to draw the line from the top
+  , lineTop : 40 // Distance to draw the line from the top
   , name : '.name' // The input field for typing a name
   , typed : '.typed' // The Html element to accept the printed name
   , clear : '.clearButton' // Button for clearing the canvas
@@ -884,8 +877,8 @@ $.fn.signaturePad.defaults = {
   , currentClass : 'current' // The class used to mark items as being currently active
   , validateFields : true // Whether the name, draw fields should be validated
   , errorClass : 'error' // The class applied to the new error Html element
-  , errorMessage : 'Va rugam sa completati datele corect' // The error message displayed on invalid submission
-  , errorMessageDraw : 'Va rugam sa semnati documentul' // The error message displayed when drawOnly and no signature is drawn
+  , errorMessage : 'Please fill in all the required fields' // The error message displayed on invalid submission
+  , errorMessageDraw : 'Please sign the document' // The error message displayed when drawOnly and no signature is drawn
   , onBeforeValidate : null // Pass a callback to be used instead of the built-in function
   , onFormError : null // Pass a callback to be used instead of the built-in function
   , onDraw : null // Pass a callback to be used to capture the drawing process
